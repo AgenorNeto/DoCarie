@@ -1,3 +1,4 @@
+import { QuestionsProvider } from './../../providers/questions/questions';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
@@ -7,8 +8,9 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
-
+  constructor(public navCtrl: NavController, private questionsProvider: QuestionsProvider) {
+    console.log('test')
   }
+
 
 }

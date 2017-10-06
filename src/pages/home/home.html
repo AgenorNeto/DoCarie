@@ -9,45 +9,26 @@
 
 <ion-content padding>
 
-<ion-card>
+<ion-list radio-group>
+  <ion-list-header>
+    Você avalia uma necessidade constante de atualização da arcada possível?
+  </ion-list-header>
 
-  <ion-card-header>
-    Você é legal?
-  </ion-card-header>
+  <ion-item>
+    <ion-label>Go</ion-label>
+    <ion-radio checked="true" value="go"></ion-radio>
+  </ion-item>
 
-  <ion-card-content>
-    <ion-item>
-      <ion-label>Daenerys Targaryen</ion-label>
-      <ion-checkbox color="dark" checked="true"></ion-checkbox>
-    </ion-item>
+  <ion-item>
+    <ion-label>Rust</ion-label>
+    <ion-radio value="rust"></ion-radio>
+  </ion-item>
 
-    <ion-item>
-      <ion-label>John Snow</ion-label>
-      <ion-checkbox color="dark" checked="true"></ion-checkbox>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Love Foverer</ion-label>
-      <ion-checkbox color="dark" checked="true"></ion-checkbox>
-    </ion-item>
-  </ion-card-content>
-
-  <ion-row no-padding>
-      <ion-col>
-        <button ion-button clear small color="danger" icon-start>
-          <ion-icon name='star'></ion-icon>
-          Anterior
-        </button>
-      </ion-col>
-      <ion-col text-right>
-        <button ion-button clear small color="danger" icon-end>
-          <ion-icon name='musical-notes'></ion-icon>
-          Próximo
-        </button>
-      </ion-col>
-    </ion-row>
-
-</ion-card>
+  <ion-item>
+    <ion-label>Python</ion-label>
+    <ion-radio value="python" disabled="true"></ion-radio>
+  </ion-item>
+</ion-list>
 
   <!--<h3>Ionic Menu Starter</h3>
 
