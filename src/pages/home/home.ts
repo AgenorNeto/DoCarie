@@ -1,6 +1,7 @@
 import { QuestionsProvider } from './../../providers/questions/questions';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { UserInfoPage } from '../user-info/user-info';
 
 @Component({
   selector: 'page-home',
@@ -9,8 +10,11 @@ import { NavController } from 'ionic-angular';
 export class HomePage {
 
   constructor(public navCtrl: NavController, private questionsProvider: QuestionsProvider) {
-    console.log('test')
+    this.questionsProvider.getQuestions();
   }
 
+  openQuestions() {
+    this.navCtrl.push(UserInfoPage);
+  }
 
 }

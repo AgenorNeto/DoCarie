@@ -1,40 +1,21 @@
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
-
 <ion-content padding>
+  <div style="text-align:center;;margin-bottom: 20px;">
+    <img src="assets/img/logo.png">
+  </div>
 
-<ion-list radio-group>
-  <ion-list-header>
-    Você avalia uma necessidade constante de atualização da arcada possível?
-  </ion-list-header>
-
-  <ion-item>
-    <ion-label>Go</ion-label>
-    <ion-radio checked="true" value="go"></ion-radio>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Rust</ion-label>
-    <ion-radio value="rust"></ion-radio>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Python</ion-label>
-    <ion-radio value="python" disabled="true"></ion-radio>
-  </ion-item>
-</ion-list>
-
-  <!--<h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
+  <p style="text-align:center; color: #333333">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean iaculis lectus vitae faucibus tincidunt. Etiam in ex bibendum,
+    cursus arcu non, elementum nisi. Donec consectetur ante pulvinar lorem aliquam, id consequat ipsum ultrices.
   </p>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>-->
+  <div style="border: 1px solid #bbbbbb; padding: 10px;">
+    <button (click)="openQuestions()" style="display: block; width: 100%; padding: 20px 0px; margin-bottom: 5px;">Risco de Cárie</button>
+    <button style="display: block; width: 100%; padding: 20px 0px; margin-bottom: 5px;">Como combater a cárie?</button>
+    <button style="display: block; width: 100%; padding: 20px 0px;">Programar higienização bucal</button>
+  </div>
+
+  <div style="text-align:center;;margin-bottom: 20px; padding: 20px;">
+    <img style="width: 120px;" src="assets/img/ufrn.png">
+  </div>
+
 </ion-content>

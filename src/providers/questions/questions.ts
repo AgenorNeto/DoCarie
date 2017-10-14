@@ -11,12 +11,9 @@ export class QuestionsProvider {
 
   getQuestions() {
     return this.http.get('assets/questions.json')
-      .subscribe((res: Response) => {
-        console.log(res.json());
-      })
-        // .map((res: Response) => {
-        //   console.log(res.json());
-        // }); //records in this case
+      .map((res: Response) => {
+        return res.json();
+      });
   }
 
 }
