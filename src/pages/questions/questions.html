@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Preencher dados</ion-title>
+    <ion-title>Levantamento de dados</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,27 +15,21 @@
 
 <ion-content padding>
 
-  <p style="font-size: 18px; text-align: center;">
-    É importante deixar claro que esses dados serão armazenados temporariamente durante a sessão da aplicação
-    e ele não sairá do seu celular.
-  </p>
+  <ng-container *ngIf="questions !== undefined">
+    <span style="font-size: 20px; font-weight: 300; margin-bottom: 5px; display: block;">Questão {{ actualQuestion + 1 }}</span>
+    <h1 style="margin: 0; padding: 0;">{{ questions[actualQuestion].question }}</h1>
 
-  <ion-list>
-
-      <ion-item>
-        <ion-label>Nome</ion-label>
-        <ion-input type="text" [formControl]="userInfoForm.get('name')"></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Idade</ion-label>
-        <ion-input type="number" [formControl]="userInfoForm.get('age')"></ion-input>
-      </ion-item>
-
-    </ion-list>
-
-    <div padding>
-      <button ion-button block (click)="goToQuestions()">Prosseguir</button>
+    <div class="question-container">
+      <ion-list radio-group [formControl]="optionResponse">
+        <ion-item *ngFor="let item of questions[actualQuestion].options; index as i">
+          <ion-label>{{ item.option }}</ion-label>
+          <ion-radio [value]="i"></ion-radio>
+        </ion-item>
+      </ion-list>
     </div>
+
+    <button (click)="nextQuestion()" ion-button block>OK</button>
+
+  </ng-container>
 
 </ion-content>

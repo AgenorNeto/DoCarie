@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, NgZone } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
-import { QuestionsProvider } from '../../providers/questions/questions';
+import { Storage } from '@ionic/storage';
+import { Observable } from 'rxjs/Rx';
 
-import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { QuestionsPage } from '../questions/questions';
 
 /**
  * Generated class for the UserInfoPage page.
@@ -23,31 +25,35 @@ export class UserInfoPage {
     constructor(
       public navCtrl: NavController,
       public navParams: NavParams,
-      private questionsProvider: QuestionsProvider,
       private fb: FormBuilder,
-      private alertCtrl: AlertController
+      private alertCtrl: AlertController,
+      private ngZone: NgZone,
+      private storage: Storage
     ) {
-      this.questionsProvider.getQuestions().subscribe((res) => {
-        console.log(res);
-      })
-
       this.userInfoForm = this.fb.group({
         name: [null, Validators.required],
         age: [null, Validators.compose([Validators.required, Validators.pattern(/[0-9]*/)])]
-      })
+      });
+
+      this.storage.get('user').then((user) => {
+        if (user) {
+          this.userInfoForm.patchValue(user);
+        }
+      });
+
     }
 
     goToQuestions() {
-      console.log('oiasd')
       if (this.userInfoForm.invalid) {
-        console.log('oiasd')
         this.alertCtrl.create({
-          message: 'Formulário inválido',
-          subTitle: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
+          subTitle: 'Formulário inválido',
+          message: 'Você precisa preencher todos os campos para continuar.',
           buttons: ['OK']
         }).present();
       } else {
-        alert('test')
+        this.storage.set('user', this.userInfoForm.value);
+        this.navCtrl.pop();
+        this.navCtrl.push(QuestionsPage);
       }
     }
 

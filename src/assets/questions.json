@@ -1,9 +1,72 @@
 [
   {
-    "question": "Qual o principal efeito descoberto na categoria 2?",
+    "question": "Você possui plano de saúde?",
     "options": [
-      { "option": "Uma tolenada", "value": 0.4 },
-      { "option": "Duas tolenada", "value": 0.2 }
+      { "option": "Sim", "value": 0.4 },
+      { "option": "Não", "value": 0.2 },
+      { "option": "Não sabe/não responde", "value": 0.2 }
+    ]
+  },
+  {
+    "question": "Ainda estuda?",
+    "options": [
+      { "option": "Sim, escola pública - estadual ou municipal", "value": 0.4 },
+      { "option": "Sim, escola federal", "value": 0.2 },
+      { "option": "Sim, escola particular", "value": 0.2 },
+      { "option": "Não estuda", "value": 0.2 }
+    ]
+  },
+  {
+    "question": "Consome doces ou guloseimas (bala, brigadeiro, bolo, biscoito, dentre outros) com que frequência?",
+    "options": [
+      { "option": "Nenhuma vez", "value": [5, 10, 20] },
+      { "option": "Esporadicamente", "value": [5, 10, 20] },
+      { "option": "Diariamente, uma única vez", "value": [5, 10, 20] },
+      { "option": "Diariamente, mais de uma vez", "value": [5, 10, 20] },
+      { "option": "Uma a 3 vezes na semana", "value": [5, 10, 20] }
+    ]
+  },
+  {
+    "question": "Escova os dentes após as refeições principais",
+    "options": [
+      { "option": "Sempre", "value": 0.4 },
+      { "option": "Quase sempre", "value": 0.2 },
+      { "option": "Não", "value": 0.2 }
+    ]
+  },
+  {
+    "question": "Você utiliza fio dental? Qual frequência?",
+    "options": [
+      { "option": "Sim, mais de 1 vez ao dia", "value": 0.4 },
+      { "option": "Sim, 1 vez ao dia", "value": 0.2 },
+      { "option": "Sim, quando lembro", "value": 0.2 },
+      { "option": "Não utilizo", "value": 0.2 }
+    ]
+  },
+  {
+    "question": "Você escova os dentes antes de dormir?",
+    "options": [
+      { "option": "Sempre", "value": 0.4 },
+      { "option": "Sim, mas as vezes esqueço", "value": 0.2 },
+      { "option": "Raramente lembro", "value": 0.2 },
+      { "option": "Não", "value": 0.2 }
+    ]
+  },
+  {
+    "question": "Você já teve cárie?",
+    "options": [
+      { "option": "Sim, uma única vez", "value": 0.4 },
+      { "option": "Sim, mais de uma vez", "value": 0.2 },
+      { "option": "Nunca", "value": 0.2 }
+    ]
+  },
+  {
+    "question": "Seus dentes são:",
+    "options": [
+      { "option": "Permanentes", "value": 0.4 },
+      { "option": "Decíduos ('De leite')", "value": 0.2 },
+      { "option": "Dentição mista ('De leite' e permanentes)", "value": 0.2 },
+      { "option": "Não se aplica", "value": 0.2 }
     ]
   }
 ]
