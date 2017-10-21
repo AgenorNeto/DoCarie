@@ -27,7 +27,7 @@
     ]
   },
   {
-    "question": "Escova os dentes após as refeições principais",
+    "question": "Escova os dentes após as refeições principais?",
     "options": [
       { "option": "Sempre", "value": 0.4 },
       { "option": "Quase sempre", "value": 0.2 },

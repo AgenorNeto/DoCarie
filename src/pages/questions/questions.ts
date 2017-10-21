@@ -5,6 +5,7 @@ import { QuestionsProvider, ProfileType } from '../../providers/questions/questi
 import { Observable } from 'rxjs/Rx';
 
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { ResultPage } from '../result/result';
 
 /**
  * Generated class for the QuestionsPage page.
@@ -40,7 +41,6 @@ export class QuestionsPage {
 
     Observable.fromPromise(this.storage.get('user'))
       .map((user: { name: string, age: number}) => {
-        // if (user !== null && user !== undefined) { }
         return this.questionsProvider.getQuestions();
       }).switch()
       .subscribe((res) => {
@@ -49,10 +49,31 @@ export class QuestionsPage {
   }
 
   nextQuestion() {
-    this.actualQuestion++;
-    this.responses.push(this.optionResponse.value);
-    this.optionResponse.reset(null);
-    console.log(this.responses);
+    if (! this.optionResponse.valid) {
+      this.showInvalidFormAlert();
+    } else {
+      this.nextQuestionHandler();
+    }
+  }
+
+  private nextQuestionHandler() {
+    if (this.actualQuestion === this.questions.length - 1) {
+      this.navCtrl.pop();
+      this.navCtrl.push(ResultPage, { result: this.responses, questions: this.questions });
+    } else {
+      this.actualQuestion++;
+      this.responses.push(this.optionResponse.value);
+      this.optionResponse.reset(null);
+    }
+  }
+
+  private showInvalidFormAlert() {
+    let alert = this.alertCtrl.create({
+      title: 'Formulário Inválido',
+      subTitle: 'Você precisa selecionar ao menos uma opção!',
+      buttons: ['OK']
+    });
+    alert.present();
   }
 
   ionViewDidLoad() {

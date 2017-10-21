@@ -1,6 +1,8 @@
 {
   "name": "DoCarie",
-  "app_id": "",
+  "app_id": "6a06ea9d",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }

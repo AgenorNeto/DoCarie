@@ -12,13 +12,15 @@ import { UserInfoPage } from '../pages/user-info/user-info';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { QuestionsProvider } from '../providers/questions/questions';
+import { ResultPage } from '../pages/result/result';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     QuestionsPage,
-    UserInfoPage
+    UserInfoPage,
+    ResultPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { QuestionsProvider } from '../providers/questions/questions';
     MyApp,
     HomePage,
     QuestionsPage,
-    UserInfoPage
+    UserInfoPage,
+    ResultPage
   ],
   providers: [
     StatusBar,
