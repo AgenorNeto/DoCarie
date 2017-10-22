@@ -14,7 +14,24 @@ export class HomePage {
     public navCtrl: NavController,
     private localNotifications: LocalNotifications,
     private alertCtrl: AlertController,
-  ) {  }
+  ) {
+
+    this.localNotifications.registerPermission()
+    .then((result: boolean) => {
+      this.localNotifications.schedule({
+        id: 1,
+        title: 'Notification',
+        text: 'Single ILocalNotification',
+        at: new Date(new Date().getTime() + 7600),
+        sound: true/*isAndroid*/? 'file://sound.mp3': 'file://beep.caf',
+        data: { secret: 'thejey' }
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+
+  }
 
   openQuestions() {
     this.navCtrl.push(UserInfoPage);
@@ -27,13 +44,6 @@ export class HomePage {
   ionViewDidLoad() {
     this.localNotifications.registerPermission()
     .then((result: boolean) => {
-
-      this.alertCtrl.create(({
-        buttons: ['OK'],
-        message: 'message',
-        title: 'title 2'
-      })).present();
-
       this.localNotifications.schedule({
         id: 1,
         title: 'Notification',
@@ -45,24 +55,7 @@ export class HomePage {
     })
     .catch((err) => {
       console.log(err);
-    })
-
-    this.alertCtrl.create(({
-      buttons: ['OK'],
-      message: 'message',
-      title: 'title 1'
-    })).present();
-
-
-    this.localNotifications.schedule({
-      id: 1,
-      title: 'Notification',
-      text: 'Single ILocalNotification',
-      sound: true/*isAndroid*/? 'file://sound.mp3': 'file://beep.caf',
-      data: { secret: 'thejey' }
     });
-    console.log('Go notification!');
-    console.log('Go notification!');
   }
 
 }
