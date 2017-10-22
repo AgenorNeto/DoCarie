@@ -13,6 +13,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { QuestionsProvider } from '../providers/questions/questions';
 import { ResultPage } from '../pages/result/result';
+import { LocalNotifications } from '@ionic-native/local-notifications';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ResultPage } from '../pages/result/result';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    QuestionsProvider
+    QuestionsProvider,
+    LocalNotifications
   ]
 })
 export class AppModule {}
