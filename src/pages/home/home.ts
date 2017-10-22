@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, AlertController } from 'ionic-angular';
 import { UserInfoPage } from '../user-info/user-info';
 import { LocalNotifications } from '@ionic-native/local-notifications';
 
@@ -11,7 +11,8 @@ export class HomePage {
 
   constructor(
     public navCtrl: NavController,
-    private localNotifications: LocalNotifications
+    private localNotifications: LocalNotifications,
+    private alertCtrl: AlertController,
   ) {  }
 
   openQuestions() {
@@ -21,6 +22,13 @@ export class HomePage {
   ionViewDidLoad() {
     this.localNotifications.registerPermission()
     .then((result: boolean) => {
+
+      this.alertCtrl.create(({
+        buttons: ['OK'],
+        message: 'message',
+        title: 'title 2'
+      })).present();
+
       this.localNotifications.schedule({
         id: 1,
         title: 'Notification',
@@ -33,6 +41,14 @@ export class HomePage {
     .catch((err) => {
       console.log(err);
     })
+
+    this.alertCtrl.create(({
+      buttons: ['OK'],
+      message: 'message',
+      title: 'title 1'
+    })).present();
+
+
     this.localNotifications.schedule({
       id: 1,
       title: 'Notification',
