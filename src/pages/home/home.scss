@@ -1,3 +1,8 @@
+@keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+
 page-home {
 
   header {
@@ -9,6 +14,24 @@ page-home {
     background: linear-gradient(to right, #fc465d, #ff7287); /* Standard syntax */
     text-align:center;
     padding: 40px 0px;
+
+    a.about-us {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+
+      img {
+        width: 32px;
+      }
+    }
+
+    a.about-us:hover {
+      background: red;animation-name: example;
+      animation-duration: 4s;
+      // Fazer a animação de clique
+    }
+
   }
 
 }

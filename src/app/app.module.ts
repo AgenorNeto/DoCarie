@@ -14,6 +14,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { QuestionsProvider } from '../providers/questions/questions';
 import { ResultPage } from '../pages/result/result';
 import { LocalNotifications } from '@ionic-native/local-notifications';
+import { AboutUsPage } from '../pages/about-us/about-us';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { LocalNotifications } from '@ionic-native/local-notifications';
     HomePage,
     QuestionsPage,
     UserInfoPage,
-    ResultPage
+    ResultPage,
+    AboutUsPage
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,8 @@ import { LocalNotifications } from '@ionic-native/local-notifications';
     HomePage,
     QuestionsPage,
     UserInfoPage,
-    ResultPage
+    ResultPage,
+    AboutUsPage
   ],
   providers: [
     StatusBar,

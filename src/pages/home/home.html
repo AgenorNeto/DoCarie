@@ -1,10 +1,12 @@
 <ion-content>
 <header>
   <img src="assets/img/logo.png" style="width: 129px;">
-  <img style="width: 120px;" src="assets/img/about.png" style="width: 32px; position: absolute; top: 10px; right: 10px;">
+  <a (click)="openAboutUsPage()" class="about-us">
+    <img src="assets/img/about.png">
+  </a>
 </header>
 
-<div style="width: 100%;font-weight: 400; font-size: 18px; border-bottom: 1px solid rgb(216, 216, 216); padding: 20px 0px; padding-left: 40px;">
+<div (click)="openQuestions()"  style="width: 100%;font-weight: 400; font-size: 18px; border-bottom: 1px solid rgb(216, 216, 216); padding: 20px 0px; padding-left: 40px;">
   Avaliar risco de cárie
 </div>
 <div style="width: 100%;font-weight: 400; font-size: 18px; border-bottom: 1px solid rgb(216, 216, 216); padding: 20px 0px; padding-left: 40px;">

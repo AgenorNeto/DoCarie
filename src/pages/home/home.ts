@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
 import { UserInfoPage } from '../user-info/user-info';
 import { LocalNotifications } from '@ionic-native/local-notifications';
+import { AboutUsPage } from '../about-us/about-us';
 
 @Component({
   selector: 'page-home',
@@ -17,6 +18,10 @@ export class HomePage {
 
   openQuestions() {
     this.navCtrl.push(UserInfoPage);
+  }
+
+  openAboutUsPage() {
+    this.navCtrl.push(AboutUsPage);
   }
 
   ionViewDidLoad() {
