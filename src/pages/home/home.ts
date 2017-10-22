@@ -19,6 +19,20 @@ export class HomePage {
   }
 
   ionViewDidLoad() {
+    this.localNotifications.registerPermission()
+    .then((result: boolean) => {
+      this.localNotifications.schedule({
+        id: 1,
+        title: 'Notification',
+        text: 'Single ILocalNotification',
+        at: new Date(new Date().getTime() + 3600),
+        sound: true/*isAndroid*/? 'file://sound.mp3': 'file://beep.caf',
+        data: { secret: 'thejey' }
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    })
     this.localNotifications.schedule({
       id: 1,
       title: 'Notification',
