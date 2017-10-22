@@ -57,6 +57,7 @@ export class HomePage {
       data: { secret: 'thejey' }
     });
     console.log('Go notification!');
+    console.log('Go notification!');
   }
 
 }
