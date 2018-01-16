@@ -1,7 +1,6 @@
-import { Component, NgZone } from '@angular/core';
+import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
-import { Observable } from 'rxjs/Rx';
 
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { QuestionsPage } from '../questions/questions';
@@ -27,7 +26,6 @@ export class UserInfoPage {
       public navParams: NavParams,
       private fb: FormBuilder,
       private alertCtrl: AlertController,
-      private ngZone: NgZone,
       private storage: Storage
     ) {
       this.userInfoForm = this.fb.group({

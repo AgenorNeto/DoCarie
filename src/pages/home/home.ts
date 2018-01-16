@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController } from 'ionic-angular';
+import { NavController/* , AlertController */ } from 'ionic-angular';
 import { UserInfoPage } from '../user-info/user-info';
 import { LocalNotifications } from '@ionic-native/local-notifications';
 import { AboutUsPage } from '../about-us/about-us';
@@ -12,8 +12,7 @@ export class HomePage {
 
   constructor(
     public navCtrl: NavController,
-    private localNotifications: LocalNotifications,
-    private alertCtrl: AlertController,
+    private localNotifications: LocalNotifications
   ) {
 
     this.localNotifications.registerPermission()

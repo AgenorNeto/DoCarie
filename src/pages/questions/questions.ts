@@ -1,18 +1,11 @@
 import { Component } from '@angular/core';
 import { Storage } from '@ionic/storage';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
-import { QuestionsProvider, ProfileType } from '../../providers/questions/questions';
+import { QuestionsProvider } from '../../providers/questions/questions';
 import { Observable } from 'rxjs/Rx';
 
-import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormControl, FormBuilder, Validators } from '@angular/forms';
 import { ResultPage } from '../result/result';
-
-/**
- * Generated class for the QuestionsPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({

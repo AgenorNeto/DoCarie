@@ -2,71 +2,75 @@
   {
     "question": "Você possui plano de saúde?",
     "options": [
-      { "option": "Sim", "value": 0.4 },
-      { "option": "Não", "value": 0.2 },
-      { "option": "Não sabe/não responde", "value": 0.2 }
+      { "option": "Sim", "value": 0 },
+      { "option": "Não", "value": 10 }
     ]
   },
   {
     "question": "Ainda estuda?",
     "options": [
-      { "option": "Sim, escola pública - estadual ou municipal", "value": 0.4 },
-      { "option": "Sim, escola federal", "value": 0.2 },
-      { "option": "Sim, escola particular", "value": 0.2 },
-      { "option": "Não estuda", "value": 0.2 }
+      { "option": "Sim, escola pública - estadual ou municipal", "value": 0 },
+      { "option": "Sim, escola federal", "value": 5 },
+      { "option": "Sim, escola particular", "value": 10 },
+      { "option": "Não estuda", "value": 10 }
     ]
   },
   {
     "question": "Consome doces ou guloseimas (bala, brigadeiro, bolo, biscoito, dentre outros) com que frequência?",
     "options": [
-      { "option": "Nenhuma vez", "value": [5, 10, 20] },
-      { "option": "Esporadicamente", "value": [5, 10, 20] },
-      { "option": "Diariamente, uma única vez", "value": [5, 10, 20] },
-      { "option": "Diariamente, mais de uma vez", "value": [5, 10, 20] },
-      { "option": "Uma a 3 vezes na semana", "value": [5, 10, 20] }
+      { "option": "Nenhuma vez", "value": 0 },
+      { "option": "Esporadicamente", "value": 0 },
+      { "option": "Diariamente, uma única vez", "value": 5 },
+      { "option": "Diariamente, mais de uma vez", "value": 10 },
+      { "option": "Uma a 3 vezes na semana", "value": 3 }
     ]
   },
   {
     "question": "Escova os dentes após as refeições principais?",
     "options": [
-      { "option": "Sempre", "value": 0.4 },
-      { "option": "Quase sempre", "value": 0.2 },
-      { "option": "Não", "value": 0.2 }
+      { "option": "Sempre", "value": 0 },
+      { "option": "Quase sempre", "value": 5 },
+      { "option": "Não/Costumo esquecer", "value": 10 }
     ]
   },
   {
     "question": "Você utiliza fio dental? Qual frequência?",
     "options": [
-      { "option": "Sim, mais de 1 vez ao dia", "value": 0.4 },
-      { "option": "Sim, 1 vez ao dia", "value": 0.2 },
-      { "option": "Sim, quando lembro", "value": 0.2 },
-      { "option": "Não utilizo", "value": 0.2 }
+      { "option": "Sim, mais de 1 vez ao dia", "value": 0 },
+      { "option": "Sim, 1 vez ao dia", "value": 0 },
+      { "option": "Sim, quando lembro", "value": 5 },
+      { "option": "Não utilizo", "value": 10 }
     ]
   },
   {
     "question": "Você escova os dentes antes de dormir?",
     "options": [
-      { "option": "Sempre", "value": 0.4 },
-      { "option": "Sim, mas as vezes esqueço", "value": 0.2 },
-      { "option": "Raramente lembro", "value": 0.2 },
-      { "option": "Não", "value": 0.2 }
+      { "option": "Sempre", "value": 0 },
+      { "option": "Sim, mas as vezes esqueço", "value": 5 },
+      { "option": "Raramente lembro", "value": 10 },
+      { "option": "Não", "value": 10 }
     ]
   },
   {
     "question": "Você já teve cárie?",
     "options": [
-      { "option": "Sim, uma única vez", "value": 0.4 },
-      { "option": "Sim, mais de uma vez", "value": 0.2 },
-      { "option": "Nunca", "value": 0.2 }
+      { "option": "Sim, uma única vez", "value": 10 },
+      { "option": "Sim, mais de uma vez", "value": 20 },
+      { "option": "Nunca", "value": 0 }
     ]
   },
   {
-    "question": "Seus dentes são:",
+    "question": "Você possui dentes tortos ou desalinhados?",
     "options": [
-      { "option": "Permanentes", "value": 0.4 },
-      { "option": "Decíduos ('De leite')", "value": 0.2 },
-      { "option": "Dentição mista ('De leite' e permanentes)", "value": 0.2 },
-      { "option": "Não se aplica", "value": 0.2 }
+      { "option": "Sim", "value": 10 },
+      { "option": "Não", "value": 0 }
+    ]
+  },
+  {
+    "question": "Você utiliza aparelho ortodôntico?",
+    "options": [
+      { "option": "Sim", "value": 10 },
+      { "option": "Não", "value": 0 }
     ]
   }
 ]
