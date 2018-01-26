@@ -41,8 +41,6 @@ export class ResultPage {
     const FD = this.getQuestionValue(1)
       + this.getQuestionValue(2);
 
-    console.log('phase 1');
-
     // Perguntas 2, 3, 4, 5, 6 – Fatores proximais – FP
     const FP = this.getQuestionValue(2)
       + this.getQuestionValue(3)
@@ -50,12 +48,8 @@ export class ResultPage {
       + this.getQuestionValue(5)
       + this.getQuestionValue(6);
 
-      console.log('phase 2');
-
     // Pergunta 7 – História de cárie – HC
     const HC = this.getQuestionValue(7);
-
-    console.log('phase 3');
 
     // Perguntas 8, 9 – Outros fatores – OF
     const OF = this.getQuestionValue(8)
@@ -65,6 +59,17 @@ export class ResultPage {
   }
 
   private getQuestionValue(question: number) {
+
+    console.log(question + '###########################################');
+
+    console.log(this.dados.questions[question - 1]);
+
+    console.log(this.dados.questions[question - 1].options);
+
+    console.log(this.dados.questions[question - 1].options[this.dados.result[question - 1]]);
+
+    console.log(this.dados.result)
+
     return this.dados.questions[question - 1].options[this.dados.result[question - 1]].value;
   }
 

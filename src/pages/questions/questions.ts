@@ -51,6 +51,9 @@ export class QuestionsPage {
 
   private nextQuestionHandler() {
     if (this.actualQuestion === this.questions.length - 1) {
+
+      this.responses.push(this.optionResponse.value);
+
       this.navCtrl.pop();
       this.navCtrl.push(ResultPage, { result: this.responses, questions: this.questions });
     } else {

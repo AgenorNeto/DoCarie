@@ -7,7 +7,7 @@
     ]
   },
   {
-    "question": "Ainda estuda?",
+    "question": "Grau de escolaridade",
     "options": [
       { "option": "Sim, escola pública - estadual ou municipal", "value": 0 },
       { "option": "Sim, escola federal", "value": 5 },
